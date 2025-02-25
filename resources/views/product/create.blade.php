@@ -24,19 +24,12 @@
                                 name="name" 
                                 value="{{ old('name') }}" 
                             />
-                            {{-- <input 
-                                type="text" 
-                                class="form-control mb-2" 
-                                placeholder="Type" 
-                                name="type" 
-                                value="{{ old('type') }}" 
-                            /> --}}
                             <select
                                 class="form-control mb-2" 
                                 name="type">
                                 <option value="">Select a type</option>
-                                <option value="car" {{ old('type') == 'car' ? 'selected' : '' }}>Car</option>
-                                <option value="airplane" {{ old('type') == 'airplane' ? 'selected' : '' }}>Airplane</option>
+                                <option value="Car" {{ old('type') == 'Car' ? 'selected' : '' }}>Car</option>
+                                <option value="Airplane" {{ old('type') == 'Airplane' ? 'selected' : '' }}>Airplane</option>
                             </select>
                             
                             <input 
