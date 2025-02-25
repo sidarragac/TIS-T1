@@ -1,0 +1,15 @@
+Instrucciones para ejecutar el programa:
+
+1. En la terminal, ejecute el comando "composer install" para instalar las dependencias requeridas para ejecutar el proyecto.
+
+2. En XAMPP, ejecute el servidor de APACHE y el de MYSQL. Ingrese al administrado de MYSQL y cree una base de datos llamada "taller1_laravel".
+
+3. Copie el archivo ".env.example" y nombrelo ".env". En este, cambie la configuración de conexión a la base de datos de acuerdo a su configuración local.
+
+4. En la terminal, ejecute el comando "php artisan key:generate" para generar automaticamente la "APP_KEY".
+
+5. En la terminal, ejecute el comando "php artisan migrate" para realizar la migración de tablas a la base de datos.
+
+6. En la terminal, ejectue el comando "php artisan serve" e ingrese a la dirección que se muestra en la terminal.
+
+Siguiendo estos pasos, podrá tener acceso completo a la aplicación.
