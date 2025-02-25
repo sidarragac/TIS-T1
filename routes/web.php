@@ -10,4 +10,5 @@ Route::get('/', $homeController.'index')->name('home.index');
 Route::get('/products', $productController.'index')->name('product.index');
 Route::get('/products/create', $productController.'create')->name('product.create');
 Route::post('/products/save', $productController.'save')->name('product.save');
+Route::get('/products/delete/{id}', $productController.'delete')->name('product.delete');
 Route::get('/products/{id}', $productController.'show')->name('product.show');

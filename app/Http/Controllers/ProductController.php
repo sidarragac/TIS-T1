@@ -31,7 +31,7 @@ class ProductController extends Controller
     public function save(Request $request): RedirectResponse
     {
         $request->validate([
-            'type' => 'required|in:car,airplane',
+            'type' => 'required|in:Car,Airplane',
             'name' => 'required',
             'description' => 'required',
             'price' => 'required|numeric|gt:0',
@@ -57,5 +57,13 @@ class ProductController extends Controller
 
         return view('product.show')->with('viewData', $viewData);
     }
-};
-?>
+
+    public function delete(string $id): RedirectResponse
+    {
+        $product = Product::findOrFail($id);
+        $product->delete();
+        $msg = $product['name'].' has been deleted successfully';
+
+        return redirect()->route('product.index', ['msg' => $msg]);
+    }
+}

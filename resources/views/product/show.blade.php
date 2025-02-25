@@ -19,7 +19,7 @@
     </div>
     <div class="text-center mt-2">
         <a 
-            {{-- href="{{ route('product.show', ['id'=> $product["id"]]) }}"  --}}
+            href="{{ route('product.delete', ['id'=> $viewData["product"]["id"]]) }}" 
             class="btn btn-danger text-black"
         >
             Delete Product
