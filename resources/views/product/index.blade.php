@@ -15,7 +15,7 @@
                 </div>
                 <div class="card-body">
                     <blockquote class="blockquote mb-0">
-                        <p>Price: $ {{ $product["price"] }}</p>
+                        <p>Type: {{ $product["type"] }}</p>
                         <footer class="blockquote-footer">
                             <cite title="Source Title">Built by: {{ $product["brand"] }}</cite>
                         </footer>
