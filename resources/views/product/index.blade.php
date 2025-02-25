@@ -10,12 +10,24 @@
     @foreach ($viewData["products"] as $product)
         <div class="col-md-4 col-lg-3 mb-2">
             <div class="card">
+                <div class="card-header">
+                    {{ $product["name"] }}
+                </div>
+                <div class="card-body">
+                    <blockquote class="blockquote mb-0">
+                        <p>Price: $ {{ $product["price"] }}</p>
+                        <footer class="blockquote-footer">
+                            <cite title="Source Title">Built by: {{ $product["brand"] }}</cite>
+                        </footer>
+                    </blockquote>
+                </div>
                 <div class="card-body text-center">
                     <a 
                         {{-- href="{{ route('product.show', ['id'=> $product["id"]]) }}"  --}}
                         class="btn bg-primary text-white"
                     >
-                        {{ $product["name"] }}
+                        + Info
+                        
                     </a>
                 </div>
             </div>
