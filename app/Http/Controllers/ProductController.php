@@ -45,4 +45,17 @@ class ProductController extends Controller
 
         return redirect()->route('product.index', ['msg' => $msg]);
     }
-}
+
+    public function show(string $id): View
+    {
+        $viewData = [];
+        $product = Product::findOrFail($id);
+
+        $viewData['title'] = $product['name'].' - Taller 1';
+        $viewData['subtitle'] = $product['name'].' - Product information';
+        $viewData['product'] = $product;
+
+        return view('product.show')->with('viewData', $viewData);
+    }
+};
+?>

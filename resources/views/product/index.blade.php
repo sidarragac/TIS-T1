@@ -23,11 +23,10 @@
                 </div>
                 <div class="card-body text-center">
                     <a 
-                        {{-- href="{{ route('product.show', ['id'=> $product["id"]]) }}"  --}}
+                        href="{{ route('product.show', ['id'=> $product["id"]]) }}" 
                         class="btn bg-primary text-white"
                     >
                         + Info
-                        
                     </a>
                 </div>
             </div>
