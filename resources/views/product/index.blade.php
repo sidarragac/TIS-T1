@@ -4,6 +4,9 @@
 @section('content')
 
 <div class="row">
+    @if($viewData['msg'])
+        <div class="alert alert-success">{{ $viewData['msg'] }}</div>
+    @endif
     @foreach ($viewData["products"] as $product)
         <div class="col-md-4 col-lg-3 mb-2">
             <div class="card">
